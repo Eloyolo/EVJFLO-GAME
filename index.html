@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>EVJF // SYSTEM CORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<img src="assets/gears.svg" class="gear" style="top:10%;left:5%;">
+<img src="assets/gears.svg" class="gear" style="bottom:10%;right:5%;">
+
+<div class="terminal" id="terminal"></div>
+
+<div id="menu" style="display:none; text-align:center;">
+  <button onclick="enter('questionnaire')">→ Définir mon profil utilisateur</button>
+  <button onclick="enter('game')">→ Débuter la partie</button>
+</div>
+
+<audio id="machine" src="assets/audio/machine.mp3"></audio>
+<audio id="drums" src="assets/audio/drums.mp3"></audio>
+<audio id="whisper" src="assets/audio/whisper.mp3" loop></audio>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
