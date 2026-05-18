@@ -1,0 +1,51 @@
+<form name="evjf-profile" method="POST" data-netlify="true">
+
+<div class="parchment">
+
+<h1>🜂 CONFIGURATION DU JOUEUR</h1>
+
+<input type="hidden" name="form-name" value="evjf-profile">
+
+<label>🟣 CODE JOUEUR</label>
+<input name="code" required>
+
+<label>🟣 EFFECTIF DE LA MISSION</label>
+<input type="number" name="effectif">
+
+<label>🟣 COÉQUIPIÈRES</label>
+<div id="team"></div>
+<button type="button" onclick="addMember()">+ ajouter unité</button>
+
+<label>🟣 DURÉE OPTIMALE</label>
+<select name="duree">
+  <option>1 journée</option>
+  <option>1 week-end</option>
+  <option>1 semaine</option>
+  <option>1 mois</option>
+</select>
+
+<label>🟣 CHAOS</label>
+<select name="chaos">
+  <option>Nintendogs</option>
+  <option>Mario</option>
+  <option>Resident Evil</option>
+</select>
+
+<label>🟣 TERRAIN</label>
+<select name="terrain">
+  <option>Urbain</option>
+  <option>Montagne</option>
+  <option>Plage</option>
+</select>
+
+<br><br>
+
+<button type="submit">VALIDER LA CONFIGURATION</button>
+
+</div>
+
+</form>
+
+<audio id="heartbeat" src="assets/audio/heartbeat.mp3" loop></audio>
+
+<script src="js/questionnaire.js"></script>
