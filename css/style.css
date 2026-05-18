@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cinzel+Decorative:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #1a0f0a, #050403);
+  color: #e8d6c3;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* bruit visuel constant */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/rune-bg.png");
+  opacity: 0.06;
+  animation: drift 40s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-200px); }
+}
+
+/* scanlines écran ancien */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/scanline.png");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* engrenages vivants */
+.gear {
+  position: fixed;
+  width: 160px;
+  opacity: 0.08;
+  animation: spin 60s linear infinite;
+  filter: blur(0.5px);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* torches animées */
+.torch {
+  position: fixed;
+  width: 120px;
+  opacity: 0.7;
+  animation: flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.4; transform: scale(0.98); }
+  to { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* parchemin central */
+.parchment {
+  background: url('../assets/parchment.png');
+  background-size: cover;
+  padding: 40px;
+  max-width: 750px;
+  margin: 60px auto;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+
+/* effet texte machine + tension */
+.terminal {
+  font-family: 'Share Tech Mono';
+  white-space: pre-line;
+  border-right: 2px solid #cbb08b;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* boutons lourds */
+button {
+  background: linear-gradient(145deg, #3a1f1b, #1b0d0b);
+  color: #f1e3d3;
+  border: 1px solid #6b3b32;
+  padding: 14px 22px;
+  margin: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,180,120,0.2);
+}
+
+/* inputs */
+input, select {
+  background: #120a08;
+  border: 1px solid #5a2f29;
+  color: #e8d6c3;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}
